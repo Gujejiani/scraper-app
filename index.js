@@ -4,9 +4,7 @@ const axios = require('axios');
 const puppeteer = require('puppeteer');
 app.get('/', async (req, res) => {
 
-    axios.get('https://psp.ge/product/list?page=1&currentPage=1&search=%E1%83%90%E1%83%9C%E1%83%90%E1%83%9A%E1%83%92%E1%83%98%E1%83%9C%E1%83%98&query=%E1%83%90%E1%83%9C%E1%83%90%E1%83%9A%E1%83%92%E1%83%98%E1%83%9C%E1%83%98&filters=%7B%7D').then(res=>{
-        console.log(res.data.data.items)
-    })
+   
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://2nabiji.ge/ge/category/zethi-da-dzmari');
